@@ -7,8 +7,5 @@ END='\e[0m'
 
 cd /litecord/
 
-echo -e "${CYAN}Migrating database...${END}"
-poetry run ./manage.py migrate
-
 echo -e "${CYAN}Initializing litecord...${END}"
 poetry run hypercorn run:app -b 0.0.0.0:5000
